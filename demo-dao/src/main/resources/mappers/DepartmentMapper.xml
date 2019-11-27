@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nf.dao.DepartmentDao">
+    <resultMap id="deptResultMap" type="com.nf.entity.Department">
+        <id property="id" column="d_id"/>
+        <result property="name" column="d_name"/>
+    </resultMap>
+
+    <delete id="deleteDept" >
+        delete from department whered_id = #{id}
+    </delete>
+</mapper>

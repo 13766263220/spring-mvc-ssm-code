@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nf.dao.StaffDao">
+    <resultMap id="deptResultMap" type="com.nf.entity.Department">
+        <id property="id" column="d_id"/>
+        <result property="name" column="d_name"/>
+    </resultMap>
+    <resultMap id="staffResultMap" type="com.nf.entity.Staff">
+        <id property="id" column="s_id"/>
+        <result property="name" column="s_name"/>
+        <result property="sex" column="s_sex"/>
+        <result property="wages" column="s_wages"/>
+        <association property="department" resultMap="deptResultMap"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="staffResultMap">
+        select
+        s.s_id, s.s_name, s.s_sex, s.s_wages,
+        d.d_id, d_name
+        from staff s
+        left join department d on s.d_id = d.d_id
+        order by s.s_id
+    </select>
+
+    <delete id="deleteByDid">
+        delete from staff where d_id = #{id};
+    </delete>
+
+</mapper>
