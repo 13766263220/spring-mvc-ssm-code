@@ -15,6 +15,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = ServiceConfig.class)
+
 public class StaffServiceTest {
     @Autowired
     private ApplicationContext context;
