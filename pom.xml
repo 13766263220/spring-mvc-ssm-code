@@ -44,7 +44,7 @@
     </properties>
 
     <dependencyManagement>
-        <!--  这里已经改过-->
+        <!--  这里已经改过12-->
         <dependencies>
             <!-- spring容器  -->
             <dependency>
