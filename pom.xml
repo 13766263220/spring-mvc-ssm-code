@@ -44,9 +44,9 @@
     </properties>
 
     <dependencyManagement>
-
+        <!--  这里已经改过 -->
         <dependencies>
-            <!-- spring容器 -->
+            <!-- spring容器  -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
