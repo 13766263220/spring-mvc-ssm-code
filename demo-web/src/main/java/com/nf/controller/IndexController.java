@@ -18,4 +18,10 @@ public class IndexController {
         model.addAttribute("pageInfo",pageInfo);
         return "index";
     }
+
+    @RequestMapping("/login")
+    public String login(){
+        System.out.println(666666);
+        return "";
+    }
 }

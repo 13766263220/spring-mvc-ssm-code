@@ -12,7 +12,6 @@
     <title>Title</title>
 </head>
 <body>
-
     <table>
         <tr>
             <td>id</td>
